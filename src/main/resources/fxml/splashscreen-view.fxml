@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="pyroman.jigsawsockets.controller.SplashScreenViewController"
+           fx:id="root">
+    <GridPane
+            fx:id="gridPaneMain"
+            stylesheets="@../styles/plitko-style.css"
+            styleClass="vbox-splashscreen">
+        <rowConstraints>
+            <RowConstraints percentHeight="90"/>
+            <RowConstraints percentHeight="10"/>
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="10"/>
+            <ColumnConstraints percentWidth="80"/>
+            <ColumnConstraints percentWidth="10"/>
+        </columnConstraints>
+        <StackPane GridPane.rowIndex="0" GridPane.columnIndex="1">
+            <ImageView fx:id="imageViewBottom">
+                <Image url="@../textures/ls_bottom.png"/>
+            </ImageView>
+            <ImageView fx:id="imageViewTop">
+                <Image url="@../textures/ls_top.png"/>
+            </ImageView>
+        </StackPane>
+    </GridPane>
+
+</StackPane>
+

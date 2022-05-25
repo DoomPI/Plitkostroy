@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="pyroman.jigsawsockets.controller.MainMenuViewController"
+           fx:id="root">
+
+    <GridPane fx:id="gridPaneMainMenu"
+              stylesheets="@../styles/plitko-style.css"
+              styleClass="grid-pane-main-menu">
+
+        <rowConstraints>
+            <RowConstraints percentHeight="10"/>
+            <RowConstraints percentHeight="30"/>
+            <RowConstraints percentHeight="60"/>
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="20"/>
+            <ColumnConstraints percentWidth="60"/>
+            <ColumnConstraints percentWidth="20"/>
+        </columnConstraints>
+
+        <ImageView GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                   GridPane.valignment="BOTTOM"
+                   fitWidth="800" fitHeight="400">
+            <Image url="@../textures/logomenu.png"/>
+        </ImageView>
+
+        <GridPane GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <rowConstraints>
+                <RowConstraints percentHeight="10"/>
+                <RowConstraints percentHeight="80"/>
+                <RowConstraints percentHeight="10"/>
+            </rowConstraints>
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="20"/>
+                <ColumnConstraints percentWidth="70"/>
+                <ColumnConstraints percentWidth="10"/>
+            </columnConstraints>
+
+            <VBox GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                  spacing="5">
+                <padding>
+                    <Insets top="20" bottom="10" left="20" right="10"/>
+                </padding>
+                <Button styleClass="button-main-menu"
+                        text="Одиночная игра"
+                        onAction="#onButtonSoloGameClick"/>
+                <Button styleClass="button-main-menu"
+                        text="Игра по сети"
+                        onAction="#onButtonLocalGameClick"/>
+                <Button styleClass="button-main-menu"
+                        text="Выход"
+                        onAction="#onButtonExitClick"/>
+            </VBox>
+
+        </GridPane>
+
+    </GridPane>
+
+</StackPane>
+

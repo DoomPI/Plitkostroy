@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="pyroman.jigsawsockets.controller.ServerInfoViewController"
+           fx:id="root"
+           stylesheets="@../../styles/plitko-style.css">
+
+    <GridPane styleClass="grid-pane-lobby-panel">
+
+        <rowConstraints>
+            <RowConstraints percentHeight="5"/>
+            <RowConstraints percentHeight="75"/>
+            <RowConstraints percentHeight="20"/>
+        </rowConstraints>
+
+        <columnConstraints>
+            <ColumnConstraints percentWidth="10"/>
+            <ColumnConstraints percentWidth="80"/>
+            <ColumnConstraints percentWidth="10"/>
+        </columnConstraints>
+
+        <VBox GridPane.rowIndex="1" GridPane.columnIndex="1" spacing="5" GridPane.halignment="CENTER">
+            <Label fx:id="labelErrorMessage"
+                   styleClass="label-error-message"/>
+            <HBox spacing="5">
+                <Label text="Порт:"
+                       styleClass="label-info"/>
+                <TextField fx:id="textFieldPort"
+                           styleClass="text-field-info"/>
+            </HBox>
+            <HBox spacing="5">
+                <Label text="Время на игру:"
+                       styleClass="label-info"/>
+                <TextField fx:id="textFieldPlayingTime"
+                           styleClass="text-field-info"/>
+            </HBox>
+            <HBox spacing="5">
+                <Label text="Никнейм:"
+                       styleClass="label-info"/>
+                <TextField fx:id="textFieldNickname"
+                           styleClass="text-field-info"/>
+            </HBox>
+        </VBox>
+
+        <HBox GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER"
+              spacing="5">
+            <Button styleClass="button-menu"
+                    text="Ок"
+                    onAction="#onButtonSubmitClick"/>
+            <Button styleClass="button-menu"
+                    text="Отмена"
+                    onAction="#onButtonCancelClick"/>
+        </HBox>
+    </GridPane>
+
+</StackPane>
